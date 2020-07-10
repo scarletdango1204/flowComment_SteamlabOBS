@@ -1,0 +1,84 @@
+@charset "UTF-8";
+/*字形のインポート*/
+@import url("https://fonts.googleapis.com/css?family=Kosugi+Maru&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Tangerine");
+
+:root {
+ /*メインテキスト,チャンネルアイコンサイズ*/
+  --default-font-size : 72px;
+ /*テキストカラー*/
+  --default-font-color : #000;
+ /*テキストふちどりカラー*/
+  --font-shadow-color : #000;
+ /*経過時間*/
+  --anime-time-scroll : 9s;
+  /*字形*/
+  --font-family: "Kosugi Maru","Tangerine";
+}
+
+.message{
+  transform: translateX(100%);
+  display: block;
+  position: absolute;
+  width: 100%;
+  font-size: var(--default-font-size);
+  color: var(--default-font-color);
+  font-weight: bold;
+  text-shadow: 5px 5px 5px var(--font-shadow-color);
+  font-family: ;
+}
+.animation{
+ 	animation-name: rightToLeft;
+  animation-duration: var(--anime-time-scroll);
+  animation-fill-mode: forwards;
+  animation-timing-function: linear; 
+}
+.animationR{
+ 	animation-name: leftToRight;
+  animation-duration: var(--anime-time-scroll);
+  animation-fill-mode: forwards;
+  animation-timing-function: linear; 
+}
+.static{
+  transform: translateX(0%);
+  text-align: center;
+  animation-name: hold;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear; 
+}
+.meta{
+  display:none;
+}
+@keyframes rightToLeft {
+  0%{
+  	transform: translateX(100%);
+  }
+  100%{
+  	transform: translateX(-100%);
+    display: none;
+  }
+}
+
+@keyframes leftToRight {
+  0%{
+  	transform: translateX(-100%);
+  }
+  100%{
+  	transform: translateX(100%);
+    display: none;
+  }
+}
+
+@keyframes hold {
+  0%{
+  	transform: translateX(0%);
+  }
+  99%{
+   opacity: 1; 
+  }
+  100%{
+  	transform: translateX(0%);
+    opacity: 0;
+  }
+}
