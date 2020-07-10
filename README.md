@@ -7,6 +7,8 @@ Livechatのコメントをある程度視聴者が自由にスタイル付けな
 
 Known issue<br/>
 - Custom Emoji currently not supported by Streamlab OBS　(https://ideas.streamlabs.com/ideas/SL-I-4572)<br/>
+
+
 既存バグ<br/>
 - カスタム絵文字が表示できない (https://ideas.streamlabs.com/ideas/SL-I-4572)<br/><br/>
 
